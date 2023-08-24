@@ -1,3 +1,4 @@
+
 /* Home page */
 .toolbar {
     display: flex;
@@ -5,6 +6,7 @@
     align-items: center;
     padding: 5px 20px;
 }
+
 .products {
     display: flex;
     justify-content: center;
@@ -17,29 +19,36 @@
     padding: 10px;
     background-color: aliceblue;
 }
+
 .added {
     color: white;
     background-color: red;
 }
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> parent of f4ff2ee (Update app.css)
 /* Cart page */
+
 table {
     width: 100%;
     border-collapse: collapse;
     text-align: left;
 }
+
 thead {
     background-color: antiquewhite;
 }
+
 td {
     padding: 5px;
 }
+
 tr:nth-child(even) {
     background-color: azure;
 }
-
