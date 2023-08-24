@@ -8,7 +8,7 @@
 .products {
     display: flex;
     justify-content: center;
-    background-color: red;
+    background-color: white;
 }
 .product {
     width: 300px;
