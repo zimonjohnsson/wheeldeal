@@ -23,6 +23,10 @@ for (let id in cart) {
     qty_td.textContent = item.qty;
     tr.appendChild(qty_td);
 
+    let sum_td=document.createElement("td");
+    sum_td.textContent= item.qty*item.price;
+    tr.appendChild(sum_td);
+
     tbody.appendChild(tr)
 
 }

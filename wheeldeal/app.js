@@ -76,5 +76,5 @@ function updateCart() {
 }
 
 function tabort(){
-    window.localStorage.clear();
+    localStorage.clear();
 }
