@@ -1,4 +1,7 @@
 /* Home page */
+*{
+    outline: 2px red solid;
+}
 .toolbar {
     display: flex;
     justify-content: space-between;
@@ -37,3 +40,24 @@ tr:nth-child(even) {
     background-color: azure;
 }
 
+.left{
+    float: left;
+    width: 24%;
+    height: 100%;
+    padding-top: 2vh;
+    margin-left: 23%;
+    text-align: right;
+}
+
+.right{
+    float: right;
+    width: 24%;
+    padding-top: 2vh;
+    margin-right: 23%;
+    text-align: left;
+}
+
+.omosstitel{
+    padding-top: 12vh;
+    text-align: center;
+}
