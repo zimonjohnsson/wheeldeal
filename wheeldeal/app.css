@@ -8,7 +8,7 @@
 .products {
     display: flex;
     justify-content: center;
-    background-color: red;
+    background-color: beige;
 }
 .product {
     width: 300px;
@@ -21,6 +21,12 @@
     color: white;
     background-color: red;
 }
+
+
+
+
+
+
 /* Cart page */
 table {
     width: 100%;
