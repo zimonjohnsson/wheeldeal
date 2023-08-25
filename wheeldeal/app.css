@@ -1,7 +1,5 @@
 /* Home page */
-*{
-    outline: 2px red solid;
-}
+
 .toolbar {
     display: flex;
     justify-content: space-between;
