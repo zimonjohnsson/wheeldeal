@@ -1,4 +1,5 @@
 /* Home page */
+
 .toolbar {
     display: flex;
     justify-content: space-between;
@@ -40,8 +41,8 @@ tr:nth-child(even) {
 .left{
     float: left;
     height: 100%;
-    width: 22%;
-    margin-left: 25%;
+    width: 30%;
+    margin-left: 17%;
     padding-top: 2vh;
     text-align: right;
     clear: both;
@@ -57,9 +58,9 @@ tr:nth-child(even) {
 
 .right{
     float: right;
-    width: 22%;
+    width: 30%;
     padding-top: 2vh;
-    margin-right: 25%;
+    margin-right: 17%;
     text-align: left;
     font-size: 1.8vh;
 }
@@ -68,17 +69,12 @@ tr:nth-child(even) {
     width: 100%;
 }
 
-
-.omosstitel{
-    padding-top: 12vh;
-    text-align: center;
-}
-
 .conomoss{
     width: 100%;
     height: 100%;
 }
 
+<<<<<<< HEAD
 .cartlink{
     text-decoration: none;
     background-color: #adadad;
@@ -95,3 +91,22 @@ tr:nth-child(even) {
     background-color: brown;
 }
 
+=======
+@media only screen and (max-width: 800px) {
+    .left{
+        margin-left: 10%;
+        width: 80%;
+        margin-right: 10%;
+        text-align: center;
+        float: none;
+    }
+
+    .right{
+        margin-left: 10%;
+        width: 80%;
+        margin-right: 10%;
+        text-align: center;
+        float: none;
+    }
+}
+>>>>>>> 8be0619612aaac38e475513e9561020f6a7aed55
