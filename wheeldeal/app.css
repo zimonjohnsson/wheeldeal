@@ -3,6 +3,9 @@ body {
     background-image: url("Assets/Background-WD.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    text-align: center;
 }
 
 .toolbar {
@@ -14,7 +17,7 @@ body {
 .products {
     display: flex;
     justify-content: center;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0);
 }
 .product {
     width: 300px;
