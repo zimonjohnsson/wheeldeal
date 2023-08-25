@@ -15,6 +15,7 @@ function showCart() {
 function addToCart() {
 
 }
+
 function removeFromCart() {
 
 }
