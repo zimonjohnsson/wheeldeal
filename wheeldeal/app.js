@@ -34,38 +34,38 @@ function add(event) {
     let title = event.target.dataset.title;
     let id = event.target.dataset.id;
 
-if (id in cart) {
-    cart[id].qty++;
-} else {
-    let cartItem = {
-        title: title,
-        price: price,
-        qty: 1
-    };
-    cart[id] = cartItem
-}
-
-    count++;
-    sum += price;
-
-    console.log(cart);
-
-    // let index = cart.indexOf(event.target.dataset.id);
-    // if (index >= 0) {
-    //     cart.splice(index, 1);
-    //     count--;
-    //     sum -= price;
-    //     event.target.className = "";
-    //     event.target.textContent = "Add to cart";
-    // } else {
-    //     cart.push(event.target.dataset.id);
-    //     count++;
-    //     sum += price;
-    //     event.target.className = "added";
-    //     event.target.textContent = "Remove";
-    // }
-    localStorage.setItem("cart", JSON.stringify(cart));
-    updateCart();
+    if (id in cart) {
+        cart[id].qty++;
+    } else {
+        let cartItem = {
+            title: title,
+            price: price,
+            qty: 1
+        };
+        cart[id] = cartItem
+    }
+    
+        count++;
+        sum += price;
+    
+        console.log(cart);
+    
+        // let index = cart.indexOf(event.target.dataset.id);
+        // if (index >= 0) {
+        //     cart.splice(index, 1);
+        //     count--;
+        //     sum -= price;
+        //     event.target.className = "";
+        //     event.target.textContent = "Add to cart";
+        // } else {
+        //     cart.push(event.target.dataset.id);
+        //     count++;
+        //     sum += price;
+        //     event.target.className = "added";
+        //     event.target.textContent = "Remove";
+        // }
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateCart();
 }
 
 function updateCart() {

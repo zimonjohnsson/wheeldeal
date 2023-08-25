@@ -1,4 +1,7 @@
 /* Home page */
+body {
+    background-image: url("Assets/Background-WD.jpg");
+}
 
 .toolbar {
     display: flex;
@@ -9,7 +12,7 @@
 .products {
     display: flex;
     justify-content: center;
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 .product {
     width: 300px;
@@ -74,7 +77,6 @@ tr:nth-child(even) {
     height: 100%;
 }
 
-<<<<<<< HEAD
 .cartlink{
     text-decoration: none;
     background-color: #adadad;
@@ -91,22 +93,3 @@ tr:nth-child(even) {
     background-color: brown;
 }
 
-=======
-@media only screen and (max-width: 800px) {
-    .left{
-        margin-left: 10%;
-        width: 80%;
-        margin-right: 10%;
-        text-align: center;
-        float: none;
-    }
-
-    .right{
-        margin-left: 10%;
-        width: 80%;
-        margin-right: 10%;
-        text-align: center;
-        float: none;
-    }
-}
->>>>>>> 8be0619612aaac38e475513e9561020f6a7aed55
