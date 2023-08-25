@@ -1,7 +1,4 @@
 /* Home page */
-*{
-    outline: 2px red solid;
-}
 .toolbar {
     display: flex;
     justify-content: space-between;
@@ -43,19 +40,32 @@ tr:nth-child(even) {
 .left{
     float: left;
     height: 100%;
-    width: 47%;
+    width: 22%;
+    margin-left: 25%;
     padding-top: 2vh;
     text-align: right;
     clear: both;
 }
 
+.left img{
+    width: 100%;
+}
+
+.left iframe{
+    width: 100%;
+}
+
 .right{
     float: right;
-    width: 24%;
+    width: 22%;
     padding-top: 2vh;
-    margin-right: 23%;
+    margin-right: 25%;
     text-align: left;
     font-size: 1.8vh;
+}
+
+.right p{
+    width: 100%;
 }
 
 
