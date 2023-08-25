@@ -117,3 +117,9 @@ tr:nth-child(even) {
         float: none;
     }
 }
+
+.footer-list{
+    list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0;
+}
