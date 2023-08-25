@@ -37,3 +37,11 @@ tr:nth-child(even) {
     background-color: azure;
 }
 
+.cartlink{
+    text-decoration: none;
+    background-color: #adadad;
+   
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+}
