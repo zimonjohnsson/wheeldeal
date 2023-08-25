@@ -51,9 +51,10 @@ tr:nth-child(even) {
     height: 100%;
     width: 30%;
     margin-left: 17%;
-    padding-top: 2vh;
+    margin-top: 2vh;
     text-align: right;
     clear: both;
+    background-color: rgba(255, 255, 255, 0.769);
 }
 
 .left img{
@@ -67,10 +68,11 @@ tr:nth-child(even) {
 .right{
     float: right;
     width: 30%;
-    padding-top: 2vh;
+    margin-top: 2vh;
     margin-right: 17%;
     text-align: left;
     font-size: 1.8vh;
+    background-color: rgba(255, 255, 255, 0.769);
 }
 
 .right p{
