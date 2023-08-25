@@ -14,7 +14,7 @@ body {
 .products {
     display: flex;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: white;
 }
 .product {
     width: 300px;
@@ -84,7 +84,7 @@ tr:nth-child(even) {
     background-color: #adadad;
     
     padding: 10px 20px;
-    text-align: center;
+    text-align: left;
     display: inline-block;
 }
 .kontakt-props{
@@ -92,6 +92,24 @@ tr:nth-child(even) {
 }
 
 .navbar-bgs{
-    background-color: brown;
+    background-color: #adadad;
+    padding: 10px 20px;
 }
 
+@media only screen and (max-width: 800px) {
+    .left{
+        margin-left: 10%;
+        width: 80%;
+        margin-right: 10%;
+        text-align: center;
+        float: none;
+    }
+
+    .right{
+        margin-left: 10%;
+        width: 80%;
+        margin-right: 10%;
+        text-align: center;
+        float: none;
+    }
+}

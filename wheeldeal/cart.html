@@ -2,22 +2,22 @@
 <html lang="en">
 <head>
     <title> WheelDeal </title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
-    <link rel="stylesheet" href="app.css">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+	<link href="css/styles.css" rel="stylesheet" />
+	<link rel="stylesheet" href="app.css">
 
     <meta name="description" content="Shopping cart project with HTML5 and JavaScript">
-	<meta name="keywords" content="HTML5,CSS,JavaScript, html5 session storage, html5 local storage">
-	<meta name="author" content="dcwebmakers.com">
-	<script src="Storage.js"></script>
-	<link rel="stylesheet" href="StorageStyle.css">
+    <meta name="keywords" content="HTML5,CSS,JavaScript, html5 session storage, html5 local storage">
+    <meta name="author" content="dcwebmakers.com">
+    <script src="Storage.js"></script>
+    <link rel="stylesheet" href="StorageStyle.css">
 </head>
-<body>
+<body onload="doShowAll()">
     <nav id="ajaxNav" class="navbar navbar-expand-md navbar-light bg-light fixed-top"></nav>
     <header id="ajaxHead" class="bg-dark py-5"></header>
 
@@ -26,7 +26,7 @@
             <legend>Shopping cart</legend>
             <label>Item: <input type="text" name="name"></label>
             <label>Quantity: <input type="text" name="data"></label>
-    
+
             <input type="button" value="Save"   onclick="SaveItem()">
             <input type="button" value="Update" onclick="ModifyItem()">
             <input type="button" value="Delete" onclick="RemoveItem()">
@@ -39,12 +39,10 @@
         </div>
     </form>
 
-    <footer id="ajaxFoot" class="py-3 bg-dark"></footer>
-
     <!-- Core JS-->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="js/scripts.js"></script>
-	<script src="app.js"></script>
+	<script src="cart.js" defer></script>
 	<script>
 		var xhttp = new XMLHttpRequest();
 		xhttp.onreadystatechange = function() { document.getElementById("ajaxNav").innerHTML = this.responseText; };
