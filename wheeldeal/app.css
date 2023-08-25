@@ -1,4 +1,9 @@
 /* Home page */
+body {
+    background-image: url("Assets/Background-WD.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 .toolbar {
     display: flex;
