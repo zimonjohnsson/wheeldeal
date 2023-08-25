@@ -663,7 +663,7 @@ progress {
 }
 @media (min-width: 1400px) {
   .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 2250px;
+    max-width: 1800px;
   }
 }
 .row {
@@ -1392,7 +1392,7 @@ progress {
   }
   .g-lg-5,
   .gx-lg-5 {
-    --bs-gutter-x: 3rem;
+    --bs-gutter-x: 6rem;
   }
   .g-lg-5,
   .gy-lg-5 {
