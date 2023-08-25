@@ -87,8 +87,7 @@ tr:nth-child(even) {
 }
 
 .navbar-bgs{
-    background-color: #adadad;
-    padding: 10px 20px;
+    background-color: rgb(107, 107, 107);
 }
 
 @media only screen and (max-width: 800px) {
