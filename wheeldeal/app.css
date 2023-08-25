@@ -1,4 +1,7 @@
 /* Home page */
+*{
+    outline: 2px red solid;
+}
 .toolbar {
     display: flex;
     justify-content: space-between;
@@ -37,6 +40,7 @@ tr:nth-child(even) {
     background-color: azure;
 }
 
+<<<<<<< HEAD
 .cartlink{
     text-decoration: none;
     background-color: #adadad;
@@ -44,4 +48,33 @@ tr:nth-child(even) {
     padding: 10px 20px;
     text-align: center;
     display: inline-block;
+=======
+.left{
+    float: left;
+    height: 100%;
+    width: 47%;
+    padding-top: 2vh;
+    text-align: right;
+    clear: both;
+}
+
+.right{
+    float: right;
+    width: 24%;
+    padding-top: 2vh;
+    margin-right: 23%;
+    text-align: left;
+    font-size: 1.8vh;
+}
+
+
+.omosstitel{
+    padding-top: 12vh;
+    text-align: center;
+}
+
+.conomoss{
+    width: 100%;
+    height: 100%;
+>>>>>>> 18c1b6c405034592dd8ea7f7f8d3c3454e9dea57
 }
