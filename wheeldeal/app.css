@@ -37,6 +37,15 @@ tr:nth-child(even) {
     background-color: azure;
 }
 
+<<<<<<< HEAD
+.cartlink{
+    text-decoration: none;
+    background-color: #adadad;
+   
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+=======
 .left{
     float: left;
     height: 100%;
@@ -77,4 +86,5 @@ tr:nth-child(even) {
 .conomoss{
     width: 100%;
     height: 100%;
+>>>>>>> 18c1b6c405034592dd8ea7f7f8d3c3454e9dea57
 }
