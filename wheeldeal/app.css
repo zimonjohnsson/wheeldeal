@@ -79,7 +79,7 @@ tr:nth-child(even) {
     background-color: #adadad;
     
     padding: 10px 20px;
-    text-align: center;
+    text-align: left;
     display: inline-block;
 }
 .kontakt-props{
@@ -87,7 +87,8 @@ tr:nth-child(even) {
 }
 
 .navbar-bgs{
-    background-color: brown;
+    background-color: #adadad;
+    padding: 10px 20px;
 }
 
 @media only screen and (max-width: 800px) {
