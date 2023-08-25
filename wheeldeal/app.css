@@ -74,7 +74,6 @@ tr:nth-child(even) {
     height: 100%;
 }
 
-<<<<<<< HEAD
 .cartlink{
     text-decoration: none;
     background-color: #adadad;
@@ -91,7 +90,6 @@ tr:nth-child(even) {
     background-color: brown;
 }
 
-=======
 @media only screen and (max-width: 800px) {
     .left{
         margin-left: 10%;
@@ -109,4 +107,3 @@ tr:nth-child(even) {
         float: none;
     }
 }
->>>>>>> 8be0619612aaac38e475513e9561020f6a7aed55
