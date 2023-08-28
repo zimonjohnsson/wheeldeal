@@ -1,8 +1,8 @@
-let addedItems = ["Test Car", "Test Car 2"];
 const Items = [
 	{ Name: "Retro Rattletron 3000", Price: 100, Category: "Bil" },
 	{ Name: "Nightmare Flash", Price: 15, Category: "Cykel" }
 ]
+let addedItems = ["Test Car", "Test Car 2", "Test Car 3", "Test Car 4", "Test Car 5", "Test Car 6"];
 
 function CheckBrowser() {
 	if ('localStorage' in window && window['localStorage'] !== null) {
@@ -15,8 +15,8 @@ function showCart() {
 		var parseHTML = "";
 
 		for (i = 0; i< addedItems.length; i++) {
-
-			parseHTML += '<tr class="cartItem"><td>' + addedItems[i] + '</td></tr>';
+			parseHTML += '<tr class="cartItem"><td>' + addedItems[i] + 
+			'</td> <td><input type="button" value="Remove Item" onclick="removeFromCart(\''+ addedItems[i] +'\')"> </td></tr>';
 		}
 		document.getElementById("cartList").innerHTML = parseHTML;
 	} else {
@@ -29,8 +29,10 @@ function addToCart(name) {
 	showCart();
 }
 function removeFromCart(name) {
-	addedItems.splice(addedItems.findIndex((element) => element == name), 1);
-	showCart();
+	if (name != null) {
+		addedItems.splice(addedItems.findIndex((element) => element == name), 1);
+		showCart();
+	}
 }
 function ClearAll() {
 	addedItems = [];
