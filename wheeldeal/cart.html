@@ -46,11 +46,6 @@
 		xhttp.send();
 
 		var xhttp = new XMLHttpRequest();
-		xhttp.onreadystatechange = function() { document.getElementById("ajaxSec").innerHTML = this.responseText; };
-		xhttp.open("GET", "Section.html", true);
-		xhttp.send();
-
-		var xhttp = new XMLHttpRequest();
 		xhttp.onreadystatechange = function() { document.getElementById("ajaxFoot").innerHTML = this.responseText; };
 		xhttp.open("GET", "Footer.html", true);
 		xhttp.send();

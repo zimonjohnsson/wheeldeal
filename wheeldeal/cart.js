@@ -4,10 +4,6 @@ const Items = [
 	{ Name: "Nightmare Flash", Price: 15, Category: "Cykel" }
 ]
 
-localStorage.setItem(itemsList, null);
-localStorage.setItem(count, 0);
-localStorage.setItem(totalPrice, 0);
-
 function CheckBrowser() {
 	if ('localStorage' in window && window['localStorage'] !== null) {
 		return true;
@@ -16,15 +12,13 @@ function CheckBrowser() {
 }
 function showCart() {
 	if (CheckBrowser()) {
-		// Testing func
-
-
 		var parseHTML = "";
+
 		for (i = 0; i< addedItems.length; i++) {
 
-			parseHTML += '<tr><td>' + addedItems[i] + '</td></tr>';
-			document.getElementById("cartList").innerHTML = parseHTML;
+			parseHTML += '<tr class="cartItem"><td>' + addedItems[i] + '</td></tr>';
 		}
+		document.getElementById("cartList").innerHTML = parseHTML;
 	} else {
 		alert('Your browser does not support HTML 5');
 	}
@@ -32,10 +26,13 @@ function showCart() {
 
 function addToCart(name) {
 	addedItems.push(name);
+	showCart();
 }
 function removeFromCart(name) {
 	addedItems.splice(addedItems.findIndex((element) => element == name), 1);
+	showCart();
 }
 function ClearAll() {
 	addedItems = [];
+	showCart();
 }
