@@ -1,3 +1,8 @@
+let addedItems = ["Test Car", "Test Car 2"];
+const Items = [
+	{ Name: "Retro Rattletron 3000", Price: 100, Category: "Bil" },
+	{ Name: "Nightmare Flash", Price: 15, Category: "Cykel" }
+]
 
 localStorage.setItem(itemsList, null);
 localStorage.setItem(count, 0);
@@ -11,7 +16,15 @@ function CheckBrowser() {
 }
 function showCart() {
 	if (CheckBrowser()) {
-		
+		// Testing func
+
+
+		var parseHTML = "";
+		for (i = 0; i< addedItems.length; i++) {
+
+			parseHTML += '<tr><td>' + addedItems[i] + '</td></tr>';
+			document.getElementById("cartList").innerHTML = parseHTML;
+		}
 	} else {
 		alert('Your browser does not support HTML 5');
 	}
@@ -23,9 +36,6 @@ function addToCart(name) {
 function removeFromCart(name) {
 	addedItems.splice(addedItems.findIndex((element) => element == name), 1);
 }
-
-let addedItems = [];
-const Items = [
-	{ Name: "Retro Rattletron 3000", Price: 100, Category: "Bil" },
-	{ Name: "Nightmare Flash", Price: 15, Category: "Cykel" }
-]
+function ClearAll() {
+	addedItems = [];
+}
