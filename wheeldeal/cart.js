@@ -6,20 +6,24 @@ function CheckBrowser() {
 }
 function showCart() {
     if (CheckBrowser()) {
+        localStorage.setItem(itemsList, null);
+        localStorage.setItem(count, 0);
+        localStorage.setItem(totalPrice, 0);
         
     } else {
-        alert('Cannot save shopping list as your browser does not support HTML 5');
+        alert('Your browser does not support HTML 5');
     }
 }
 
-function addToCart() {
+function addToCart(name) {
+    addedItems.push(name);
 
 }
-
 function removeFromCart() {
 
 }
 
+let addedItems = [];
 let Items = [
     { Name: "Retro Rattletron 3000", Price: 100, Category: "Bil" },
     { Name: "Nightmare Flash", Price: 15, Category: "Cykel" }
