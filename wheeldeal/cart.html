@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title> WheelDeal </title>
+	<title> WheelDeal </title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 	<meta name="description" content="" />
@@ -14,23 +14,24 @@
 
 <body onload="showCart()" style="background-image: none;">
 	<nav style="height: 100px;" id="ajaxNav" class="navbar navbar-expand-md navbar-light bg-light fixed-top"></nav>
-    <header style="height: 100px; visibility: hidden;" id="ajaxHead" class="bg-dark py-5"></header>
-    <div>
-        <h1> Shopping Cart </h3>
-    </div>
-    <div style="height: 800px;">
-        <form name="ShoppingList">
-            <table id="cartList" style="text-align: center;">
-                                
-            </table>
-            <br>
-            <label><input type="button" value="Delete all" onclick="ClearAll()"></label>
-        </form>
-    </div>
+	<header style="height: 100px; visibility: hidden;" id="ajaxHead" class="bg-dark py-5"></header>
+	<div>
+		<h1> Shopping Cart </h1>
 
-    <footer id="ajaxFoot" class="py-3 bg-dark"></footer>
+		<br>
+		<table id="cartList" style="text-align: center;"></table>
+		<br>
 
-    <!-- Core JS-->
+		<input type="button" value="Delete all" onclick="ClearAll()">
+		<input type="button" value="Place Order" onclick="">
+		<br><br>
+		<br><br>
+		<br><br>
+	</div>
+
+	<footer id="ajaxFoot" class="py-3 bg-dark"></footer>
+
+	<!-- Core JS-->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="js/scripts.js"></script>
 	<script src="cart.js" defer></script>
