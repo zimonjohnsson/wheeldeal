@@ -1,8 +1,9 @@
 const Items = [
-	{ Name: "Retro Rattletron 3000", Price: 100, Category: "Bil" },
-	{ Name: "Nightmare Flash", Price: 15, Category: "Cykel" }
+	{ Name: "Retro Rattletron 3000", Price: 100 },
+	{ Name: "Nightmare Flash", Price: 15 }
 ]
-let addedItems = ["Test Car", "Test Car 2", "Test Car 3", "Test Car 4", "Test Car 5", "Test Car 6"];
+let addedItems = [];
+if (localStorage.getItem("savedItems") != null) addedItems = JSON.parse(localStorage.getItem("savedItems"));
 
 function CheckBrowser() {
 	if ('localStorage' in window && window['localStorage'] !== null) {
@@ -13,6 +14,7 @@ function CheckBrowser() {
 function showCart() {
 	if (CheckBrowser()) {
 		var parseHTML = "";
+		if (localStorage.getItem("savedItems") != null) addedItems = JSON.parse(localStorage.getItem("savedItems"));
 
 		for (i = 0; i< addedItems.length; i++) {
 			parseHTML += '<tr class="cartItem"><td>' + addedItems[i] + 
@@ -25,16 +27,23 @@ function showCart() {
 }
 
 function addToCart(name) {
+	if (localStorage.getItem("savedItems") != null) addedItems = JSON.parse(localStorage.getItem("savedItems"));
 	addedItems.push(name);
+	localStorage.setItem("savedItems", JSON.stringify(addedItems));
 	showCart();
 }
+
 function removeFromCart(name) {
 	if (name != null) {
+		if (localStorage.getItem("savedItems") != null) addedItems = JSON.parse(localStorage.getItem("savedItems"));
 		addedItems.splice(addedItems.findIndex((element) => element == name), 1);
+		localStorage.setItem("savedItems", JSON.stringify(addedItems));
 		showCart();
 	}
 }
+
 function ClearAll() {
 	addedItems = [];
+	localStorage.clear();
 	showCart();
 }
