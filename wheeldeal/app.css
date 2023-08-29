@@ -135,12 +135,13 @@ tr:nth-child(even) {
   margin: 0;
 }
 #cartTable {
-    margin: 0 20%;
+    margin: 0 auto;
+    width: 70%;
     border-radius: 50px;
     border: rgb(17, 0, 15) solid 1px;
     padding: 30px 10px;
     background-color: rgba(66, 66, 66, 0.05);
-    max-width: 1000px;
+    max-width: 1200px;
 }
 .cartButton button {
     font-family: 'Poppins';
