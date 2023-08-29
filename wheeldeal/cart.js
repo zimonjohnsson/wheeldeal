@@ -40,9 +40,9 @@ function addToCart(name) {
 	if (localStorage.getItem("savedCount") != null) addedCounts = JSON.parse(localStorage.getItem("savedCount"));
 	
 	var itemExists = addedItems.includes(name);
-	if (itemExists) {
+	if (itemExists) { // Add item count
 		addedCounts[addedItems.indexOf(name)]++;
-	} else  {
+	} else  { // Add new item
 		addedItems.push(name);
 		addedCounts[addedItems.indexOf(name)] = 1;
 	}
@@ -57,11 +57,11 @@ function removeFromCart(name) {
 		if (localStorage.getItem("savedCount") != null) addedCounts = JSON.parse(localStorage.getItem("savedCount"));
 		
 		var itemExists = addedItems.includes(name);
-		if (itemExists && addedCounts[addedItems.indexOf(name)] > 1) { // Less Count
+		if (itemExists && addedCounts[addedItems.indexOf(name)] > 1) { // Lower item count
 			addedCounts[addedItems.indexOf(name)]--;
-		} else {
-			addedItems.splice(addedItems.indexOf(name), 1);
+		} else { // Remove item
 			addedCounts.splice(addedItems.indexOf(name), 1);
+			addedItems.splice(addedItems.indexOf(name), 1);
 		}
 		localStorage.setItem("savedItems", JSON.stringify(addedItems));
 		localStorage.setItem("savedCount", JSON.stringify(addedCounts));

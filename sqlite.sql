@@ -4,6 +4,6 @@
 --  empcolor TEXT NOT NULL
 -- );
 
--- INSERT INTO example (empid, empcolor) VALUES (4, "lila");
+-- INSERT INTO example (empid, empcolor) VALUES (5, "lila");
 
-SELECT * FROM example;
+ SELECT * FROM example;
