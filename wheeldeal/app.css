@@ -143,6 +143,11 @@ tr:nth-child(even) {
     background-color: rgba(66, 66, 66, 0.05);
     max-width: 1200px;
 }
+#cartTable hr {
+    border: none;
+    height: 1px;
+    background-color: rgb(83, 83, 83);
+}
 .cartButton button {
     font-family: 'Poppins';
     color: #000000 ;
