@@ -72,8 +72,8 @@
         </div>
         <div class="info">
             <div>
-                <p><strong>From:</strong> Your Company Name</p>
-                <p>Your Address</p>
+                <p><strong>From:</strong> Wheeldeal</p>
+                <p>Carl Krooks gata 9</p>
                 <p>Your City, Postal Code</p>
             </div>
             <div>
@@ -143,28 +143,28 @@
             `;
     
             try {
-                const transporter = nodemailer.createTransport({
-                    service: 'your-email-service',
-                    auth: {
-                        user: 'your-email@example.com',
-                        pass: 'your-email-password',
-                    },
-                });
-    
-                const mailOptions = {
-                    from: 'your-email@example.com',
-                    to: email,
-                    subject: 'Invoice for Your Order',
-                    text: emailContent,
-                };
-    
-                await transporter.sendMail(mailOptions);
-                alert('Fakturan har skickats till din e-postadress.');
-            } catch (error) {
-                console.error('Error sending email:', error);
-                alert('Ett tekniskt fel uppstod. Vänligen försök igen senare.');
-            }
+            const transporter = nodemailer.createTransport({
+                service: 'Gmail',
+                auth: {
+                    user: 'Wheeldeal.nti@gmail.com',
+                    pass: 'Wheeldeal2000',
+                },
+            });
+
+            const mailOptions = {
+                from: 'Wheeldeal.nti@gmail.com',
+                to: email,
+                subject: 'Invoice for Your Order',
+                text: emailContent,
+            };
+
+            await transporter.sendMail(mailOptions);
+            alert('Fakturan har skickats till din e-postadress.');
+        } catch (error) {
+            console.error('Error sending email:', error);
+            alert('Ett tekniskt fel uppstod. Vänligen försök igen senare.');
         }
-    </script>
+    }
+</script>
 </body>
 </html>
