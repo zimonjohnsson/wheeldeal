@@ -136,25 +136,35 @@ tr:nth-child(even) {
 }
 .cartButton button {
     font-family: 'Poppins';
-    color: #ffffff !important;
+    color: #000000 ;
     font-weight: 700;
     text-decoration: none;
-    background-color: #000000;
+    background-color: #00000000;
     padding: 10px;
     border-radius: 20px;
     display: inline-block;
     border: none;
     transition: all 0.4s ease 0s;
+    border: black 1px solid;
+
+}
+.cartButton button:hover {
+    background-color: rgba(226, 37, 255, 0.600);
 }
 input[type=button] {
     font-family: 'Poppins';
-    color: #ffffff !important;
+    color: #000000 ;
     font-weight: 700;
     text-decoration: none;
-    background-color: rgb(0, 0, 0);
+    background-color: #ffffff;
     padding: 10px;
     border-radius: 20px;
     display: inline-block;
     border: none;
     transition: all 0.4s ease 0s;
+    border: black 1px solid;
+}
+input[type=button]:hover {
+    background-color: rgba(226, 37, 255, 0.600);
+    
 }
