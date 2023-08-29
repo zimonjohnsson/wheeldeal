@@ -3,7 +3,9 @@ const Items = [
 	{ Name: "Nightmare Flash", Price: 15 }
 ]
 let addedItems = [];
+let addedCount = [];
 if (localStorage.getItem("savedItems") != null) addedItems = JSON.parse(localStorage.getItem("savedItems"));
+if (localStorage.getItem("savedCount") != null) addedCount = JSON.parse(localStorage.getItem("savedCount"));
 
 function CheckBrowser() {
 	if ('localStorage' in window && window['localStorage'] !== null) {
@@ -15,10 +17,12 @@ function showCart() {
 	if (CheckBrowser()) {
 		var parseHTML = "";
 		if (localStorage.getItem("savedItems") != null) addedItems = JSON.parse(localStorage.getItem("savedItems"));
+		if (localStorage.getItem("savedCount") != null) addedCount = JSON.parse(localStorage.getItem("savedCount"));
 
 		for (i = 0; i< addedItems.length; i++) {
-			parseHTML += '<tr class="cartItem"><td>' + addedItems[i] + 
-			'</td> <td><input type="button" value="Remove Item" onclick="removeFromCart(\''+ addedItems[i] +'\')"> </td></tr>';
+			parseHTML += '<tr class="cartItem"> <td>' + addedItems[i] + 
+			'</td><td>'+ '</td>' 
+			+'<td><input type="button" value="Remove" onclick="removeFromCart(\''+ addedItems[i] +'\')"> </td></tr>';
 		}
 		document.getElementById("cartList").innerHTML = parseHTML;
 		CountCartItems();
@@ -28,10 +32,14 @@ function showCart() {
 }
 
 function addToCart(name) {
-	if (localStorage.getItem("savedItems") != null) addedItems = JSON.parse(localStorage.getItem("savedItems"));
-	addedItems.push(name);
-	localStorage.setItem("savedItems", JSON.stringify(addedItems));
-	showCart();
+	if (false) {
+		
+	} else  {
+		if (localStorage.getItem("savedItems") != null) addedItems = JSON.parse(localStorage.getItem("savedItems"));
+		addedItems.push(name);
+		localStorage.setItem("savedItems", JSON.stringify(addedItems));
+		showCart();
+	}
 }
 
 function removeFromCart(name) {
