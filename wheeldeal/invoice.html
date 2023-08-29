@@ -86,16 +86,11 @@
             <tr>
                 <th>Description</th>
                 <th>Quantity</th>
-                <th>Unit Price</th>
                 <th>Total</th>
             </tr>
-            <tr>
-                <td>Product 1</td>
-                <td>2</td>
-                <td>$50.00</td>
-                <td>$100.00</td>
-            </tr>
-            <!-- Add more rows for other items -->
+
+            <div id="invoiceTable"></div>
+
         </table>
         <div class="total">
             <p><strong>Total Amount:</strong> $100.00</p>
@@ -117,6 +112,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/nodemailer@6.6.3/lib/nodemailer.js"></script>
+    <script src="invoice.js"></script>
     <script>
         function printPDF() {
             window.print();
@@ -165,7 +161,7 @@
             console.error('Error sending email:', error);
             alert('Ett tekniskt fel uppstod. Vänligen försök igen senare.');
         }
-    }
-</script>
+        }
+    </script>
 </body>
 </html>
