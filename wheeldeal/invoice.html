@@ -145,6 +145,158 @@
 
             alert('Fakturan har skickats till din e-postadress.');
         }
+
+        <!DOCTYPE html>
+<html>
+<head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .invoice {
+        width: 80%;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .info {
+        display: flex;
+        justify-content: space-between;
+    }
+    .info p {
+        margin: 0;
+    }
+    .item-list {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    .item-list th, .item-list td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    .total {
+        text-align: right;
+        margin-top: 20px;
+    }
+    .email-section {
+        background-color: #f7f7f7;
+        padding: 20px;
+        border: 1px solid #ccc;
+        margin-top: 20px;
+    }
+    .email-form label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    .email-form input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    .email-form button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <div class="invoice">
+        <div class="header">
+            <h1>Invoice Receipt</h1>
+        </div>
+        <div class="info">
+            <div>
+                <p><strong>From:</strong> Your Company Name</p>
+                <p>Your Address</p>
+                <p>Your City, Postal Code</p>
+            </div>
+            <div>
+                <p><strong>To:</strong> <span id="customerName"></span></p>
+                <p><span id="customerEmail"></span></p>
+            </div>
+        </div>
+        <table class="item-list">
+            <tr>
+                <th>Description</th>
+                <th>Quantity</th>
+                <th>Unit Price</th>
+                <th>Total</th>
+            </tr>
+            <tr>
+                <td>Product 1</td>
+                <td>2</td>
+                <td>$50.00</td>
+                <td>$100.00</td>
+            </tr>
+            <!-- Add more rows for other items -->
+        </table>
+        <div class="total">
+            <p><strong>Total Amount:</strong> $100.00</p>
+        </div>
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
+        <button onclick="printPDF()">Print PDF</button>
+    </div>
+    
+    <div class="email-section">
+        <h2>Skicka fakturan via e-post</h2>
+        <form class="email-form" onsubmit="sendInvoiceByEmail(event)">
+            <label for="name">Namn:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">E-postadress:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Skicka faktura</button>
+        </form>
+    </div>
+
+    <script>
+        function printPDF() {
+            window.print();
+        }
+
+        function sendInvoiceByEmail(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+
+            document.getElementById('customerName').textContent = name;
+            document.getElementById('customerEmail').textContent = email;
+
+            const invoiceDetails = document.querySelector('.invoice').innerHTML;
+            const emailContent = `
+                Hej ${name},
+
+                Tack för din beställning! Här är din faktura:
+
+                ${invoiceDetails}
+
+                Med vänliga hälsningar,
+                Ditt företagsnamn
+            `;
+
+            // Skicka e-post här, använd en serverbaserad lösning eller e-posttjänst
+
+            alert('Fakturan har skickats till din e-postadress.');
+        }
+    </script>
+</body>
+</html>
+
     </script>
 </body>
 </html>
