@@ -42,6 +42,7 @@ function addToCart(name) {
 	} else  {
 		addedItems.push(name);
 		localStorage.setItem("savedItems", JSON.stringify(addedItems));
+		addedCounts[addedItems.indexOf(name)] = 1;
 		localStorage.setItem("savedCount", JSON.stringify(addedCounts))
 	}
 	showCart();
@@ -68,7 +69,8 @@ function removeFromCart(name) {
 function ClearAll() {
 	addedItems = [];
 	addedCounts = [];
-	
+	localStorage.setItem("savedItems", JSON.stringify(addedItems));
+	localStorage.setItem("savedCount", JSON.stringify(addedCounts))
 	showCart();
 }
 
