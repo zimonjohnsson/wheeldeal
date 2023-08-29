@@ -3,9 +3,9 @@ const Items = [
 	{ Name: "Nightmare Flash", Price: 15 }
 ]
 let addedItems = [];
-let addedCount = [];
+let addedCounts = [0];
 if (localStorage.getItem("savedItems") != null) addedItems = JSON.parse(localStorage.getItem("savedItems"));
-if (localStorage.getItem("savedCount") != null) addedCount = JSON.parse(localStorage.getItem("savedCount"));
+if (localStorage.getItem("savedCount") != null) addedCounts = JSON.parse(localStorage.getItem("savedCount"));
 
 function CheckBrowser() {
 	if ('localStorage' in window && window['localStorage'] !== null) {
@@ -17,11 +17,11 @@ function showCart() {
 	if (CheckBrowser()) {
 		var parseHTML = "";
 		if (localStorage.getItem("savedItems") != null) addedItems = JSON.parse(localStorage.getItem("savedItems"));
-		if (localStorage.getItem("savedCount") != null) addedCount = JSON.parse(localStorage.getItem("savedCount"));
+		if (localStorage.getItem("savedCount") != null) addedCounts = JSON.parse(localStorage.getItem("savedCount"));
 
 		for (i = 0; i< addedItems.length; i++) {
 			parseHTML += '<tr class="cartItem"> <td>' + addedItems[i] + 
-			'</td><td>'+ '</td>' 
+			'</td><td>'+ addedCounts[i] +'</td>' 
 			+'<td><input type="button" value="Remove" onclick="removeFromCart(\''+ addedItems[i] +'\')"> </td></tr>';
 		}
 		document.getElementById("cartList").innerHTML = parseHTML;
@@ -32,27 +32,42 @@ function showCart() {
 }
 
 function addToCart(name) {
-	if (false) {
-		
+	if (localStorage.getItem("savedItems") != null) addedItems = JSON.parse(localStorage.getItem("savedItems"));
+	if (localStorage.getItem("savedCount") != null) addedCounts = JSON.parse(localStorage.getItem("savedCount"));
+	var itemExists = addedItems.includes(name);
+
+	if (itemExists) {
+		addedCounts[addedItems.indexOf(name)]++;
+		localStorage.setItem("savedCount", JSON.stringify(addedCounts))
 	} else  {
-		if (localStorage.getItem("savedItems") != null) addedItems = JSON.parse(localStorage.getItem("savedItems"));
 		addedItems.push(name);
 		localStorage.setItem("savedItems", JSON.stringify(addedItems));
-		showCart();
+		localStorage.setItem("savedCount", JSON.stringify(addedCounts))
 	}
+	showCart();
 }
 
 function removeFromCart(name) {
 	if (name != null) {
 		if (localStorage.getItem("savedItems") != null) addedItems = JSON.parse(localStorage.getItem("savedItems"));
-		addedItems.splice(addedItems.findIndex((element) => element == name), 1);
-		localStorage.setItem("savedItems", JSON.stringify(addedItems));
-		showCart();
+		if (localStorage.getItem("savedCount") != null) addedCounts = JSON.parse(localStorage.getItem("savedCount"));
+		var itemExists = addedItems.includes(name);
+
+		if (itemExists && addedCounts[addedItems.indexOf(name)] > 1) {
+			addedCounts[addedItems.indexOf(name)]--;
+			localStorage.setItem("savedCount", JSON.stringify(addedCounts))
+		} else {
+			addedItems.splice(addedItems.indexOf(name), 1);
+			localStorage.setItem("savedItems", JSON.stringify(addedItems));
+			localStorage.setItem("savedCount", JSON.stringify(addedCounts))
+		}
 	}
+	showCart();
 }
 
 function ClearAll() {
 	addedItems = [];
+	addedCounts = [];
 	localStorage.clear();
 	showCart();
 }
