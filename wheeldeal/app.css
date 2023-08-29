@@ -136,7 +136,7 @@ tr:nth-child(even) {
 }
 #cartTable {
     margin: 0 auto;
-    width: 70%;
+    width: 60%;
     border-radius: 50px;
     border: rgb(17, 0, 15) solid 1px;
     padding: 30px 10px;
