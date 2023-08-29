@@ -140,6 +140,7 @@ tr:nth-child(even) {
     border: rgb(17, 0, 15) solid 1px;
     padding: 30px 10px;
     background-color: rgba(66, 66, 66, 0.05);
+    max-width: 1000px;
 }
 .cartButton button {
     font-family: 'Poppins';
