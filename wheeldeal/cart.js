@@ -3,7 +3,7 @@ const Items = [
 	{ Name: "Nightmare Flash", Price: 15 }
 ]
 let addedItems = [];
-let addedCounts = [0];
+let addedCounts = [];
 if (localStorage.getItem("savedItems") != null) addedItems = JSON.parse(localStorage.getItem("savedItems"));
 if (localStorage.getItem("savedCount") != null) addedCounts = JSON.parse(localStorage.getItem("savedCount"));
 
@@ -42,6 +42,7 @@ function addToCart(name) {
 	} else  {
 		addedItems.push(name);
 		localStorage.setItem("savedItems", JSON.stringify(addedItems));
+		addedCounts[addedItems.indexOf(name)] = 1;
 		localStorage.setItem("savedCount", JSON.stringify(addedCounts))
 	}
 	showCart();
@@ -68,7 +69,8 @@ function removeFromCart(name) {
 function ClearAll() {
 	addedItems = [];
 	addedCounts = [];
-	localStorage.clear();
+	localStorage.setItem("savedItems", JSON.stringify(addedItems));
+	localStorage.setItem("savedCount", JSON.stringify(addedCounts))
 	showCart();
 }
 
