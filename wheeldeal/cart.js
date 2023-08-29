@@ -21,7 +21,6 @@ function showCart() {
 			'</td> <td><input type="button" value="Remove Item" onclick="removeFromCart(\''+ addedItems[i] +'\')"> </td></tr>';
 		}
 		document.getElementById("cartList").innerHTML = parseHTML;
-		CountCartItems();
 	} else {
 		alert('Your browser does not support HTML 5');
 	}
@@ -32,6 +31,7 @@ function addToCart(name) {
 	addedItems.push(name);
 	localStorage.setItem("savedItems", JSON.stringify(addedItems));
 	showCart();
+	CountCartItems();
 }
 
 function removeFromCart(name) {
@@ -40,6 +40,7 @@ function removeFromCart(name) {
 		addedItems.splice(addedItems.findIndex((element) => element == name), 1);
 		localStorage.setItem("savedItems", JSON.stringify(addedItems));
 		showCart();
+		CountCartItems();
 	}
 }
 
@@ -47,9 +48,11 @@ function ClearAll() {
 	addedItems = [];
 	localStorage.clear();
 	showCart();
+	CountCartItems();
 }
 
 function CountCartItems() {
 	if (localStorage.getItem("savedItems") != null) addedItems = JSON.parse(localStorage.getItem("savedItems"));
 	document.getElementById("countCart").innerHTML = addedItems.length;
+	console.log("HEEEEY");
 }
