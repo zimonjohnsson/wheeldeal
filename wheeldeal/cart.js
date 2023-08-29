@@ -20,8 +20,12 @@ function showCart() {
 		if (localStorage.getItem("savedCount") != null) addedCounts = JSON.parse(localStorage.getItem("savedCount"));
 
 		for (i = 0; i< addedItems.length; i++) {
-			parseHTML += '<tr class="cartItem"> <td>' + addedItems[i] + 
-			'</td><td>'+ addedCounts[i] +'</td>' 
+			let theItem = Items.find((obj) => obj.Name == addedItems[i]);
+			console.log(addedItems[i]);
+
+			parseHTML += '<tr class="cartItem"> <td>' + addedItems[i]
+			+'</td><td>'+ addedCounts[i] +'</td>'
+			+'<td>'+ theItem.Price +'</td>'
 			+'<td><input type="button" value="Remove" onclick="removeFromCart(\''+ addedItems[i] +'\')"> </td></tr>';
 		}
 		document.getElementById("cartList").innerHTML = parseHTML;
