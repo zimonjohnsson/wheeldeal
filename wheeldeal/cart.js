@@ -114,3 +114,4 @@ function CountCartItems() {
 	document.getElementById("countCart").innerHTML = "Total - "+ totalItems +" items : $"+ totalCost;
 	document.getElementById("countCartNav").innerHTML = ""+ totalItems;
 }
+
