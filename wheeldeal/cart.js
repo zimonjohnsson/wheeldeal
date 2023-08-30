@@ -111,4 +111,5 @@ function CountCartItems() {
 
 	if (localStorage.getItem("savedItems") != null) addedItems = JSON.parse(localStorage.getItem("savedItems"));
 	document.getElementById("countCart").innerHTML = "Total - "+ totalItems +" items : $"+ totalCost;
+	document.getElementById("countCartNav").innerHTML = ""+ totalItems ;
 }
