@@ -100,6 +100,8 @@ function ClearAll() {
 
 function CountCartItems() {
 	if (localStorage.getItem("savedCount") != null) addedCounts = JSON.parse(localStorage.getItem("savedCount"));
+	if (localStorage.getItem("savedItems") != null) addedItems = JSON.parse(localStorage.getItem("savedItems"));
+	
 	var totalItems = 0;
 	var totalCost = 0;
 	for (let i = 0; i < addedCounts.length; i++) {
@@ -109,7 +111,6 @@ function CountCartItems() {
 		totalCost += (Items.find((obj) => obj.Name == addedItems[i]).Price * addedCounts[i]);
 	}
 
-	if (localStorage.getItem("savedItems") != null) addedItems = JSON.parse(localStorage.getItem("savedItems"));
 	document.getElementById("countCart").innerHTML = "Total - "+ totalItems +" items : $"+ totalCost;
-	document.getElementById("countCartNav").innerHTML = ""+ totalItems ;
+	document.getElementById("countCartNav").innerHTML = ""+ totalItems;
 }
