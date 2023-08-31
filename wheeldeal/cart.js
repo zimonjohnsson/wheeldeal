@@ -69,8 +69,27 @@ function addToCart(name) {
 	}
 	localStorage.setItem("savedItems", JSON.stringify(addedItems));
 	localStorage.setItem("savedCount", JSON.stringify(addedCounts));
+
+	const cart = document.getElementById('countingThing');
+	const savedCountArray = JSON.parse(localStorage.getItem('savedCount'));
+	
+	if (Array.isArray(savedCountArray)) {
+	  let summa = 0;
+	
+	  for (const num of savedCountArray) {
+		if (typeof num === 'number') {
+		  summa += num;
+		}
+	  }
+	
+	  cart.innerHTML = summa;
+	} else {
+	  cart.innerHTML = "No valid array found in localStorage.";
+	}
+
 	showCart();
 }
+
 
 function removeFromCart(name) {
 	if (name != null) {
@@ -114,3 +133,25 @@ function CountCartItems() {
 	document.getElementById("countCart").innerHTML = "Total - "+ totalItems +" items : $"+ totalCost;
 }
 
+/*const rakna = localStorage.getItem("savedCount");
+const storedArray = JSON.parse(rakna);
+console.log(storedArray); // Logging the parsed array to check
+
+if (Array.isArray(storedArray)) {
+  // Step 2: Loop through the array and add up all the numbers
+  let sum = 0;
+
+  for (const num of storedArray) {
+    if (typeof num === 'number') {
+      sum += num;
+    }
+  }
+
+  // Step 3: Display or use the result
+  console.log(sum);
+  
+  // Update the HTML content with the calculated sum
+  document.getElementById("countingThing").innerHTML = sum;
+} else {
+  console.log("No valid array found in localStorage.");
+}*/
