@@ -56,8 +56,7 @@ function showCart() {
 	}
 }
 
-
-window.addEventListener("load", (event) => {
+async function ladda() {
 	localStorage.setItem("savedItems", JSON.stringify(addedItems));
 	localStorage.setItem("savedCount", JSON.stringify(addedCounts));
 
@@ -77,7 +76,7 @@ window.addEventListener("load", (event) => {
 	} else {
 	  cart.innerHTML = "No valid array found in localStorage.";
 	}
-});
+}
 
 function addToCart(name) {
 	if (localStorage.getItem("savedItems") != null) addedItems = JSON.parse(localStorage.getItem("savedItems"));
