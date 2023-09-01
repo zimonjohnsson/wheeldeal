@@ -56,6 +56,28 @@ function showCart() {
 	}
 }
 
+window.addEventListener("load", (event) => {
+	localStorage.setItem("savedItems", JSON.stringify(addedItems));
+	localStorage.setItem("savedCount", JSON.stringify(addedCounts));
+
+	const cart = document.getElementById('countingThing');
+	const savedCountArray = JSON.parse(localStorage.getItem('savedCount'));
+	
+	if (Array.isArray(savedCountArray)) {
+	  let summa = 0;
+	
+	  for (const num of savedCountArray) {
+		if (typeof num === 'number') {
+		  summa += num;
+		}
+	  }
+	
+	  cart.innerHTML = summa;
+	} else {
+	  cart.innerHTML = "No valid array found in localStorage.";
+	}
+});
+
 function addToCart(name) {
 	if (localStorage.getItem("savedItems") != null) addedItems = JSON.parse(localStorage.getItem("savedItems"));
 	if (localStorage.getItem("savedCount") != null) addedCounts = JSON.parse(localStorage.getItem("savedCount"));
@@ -106,6 +128,8 @@ function removeFromCart(name) {
 		localStorage.setItem("savedItems", JSON.stringify(addedItems));
 		localStorage.setItem("savedCount", JSON.stringify(addedCounts));
 	}
+
+	window.location.reload();
 	showCart();
 }
 
@@ -114,6 +138,9 @@ function ClearAll() {
 	addedCounts = [];
 	localStorage.setItem("savedItems", JSON.stringify(addedItems));
 	localStorage.setItem("savedCount", JSON.stringify(addedCounts));
+
+	window.location.reload();
+	
 	showCart();
 }
 
