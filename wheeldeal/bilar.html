@@ -16,7 +16,7 @@
 		}
 	</style>
 </head>
-<body onload="ladda()">
+<body>
 	<nav id="ajaxNav" class="navbar navbar-expand-md navbar-light bg-light fixed-top"></nav>
 
 	<div class="conomoss">
@@ -176,12 +176,8 @@
 		async function loadContent() {
 		  const data = {
 			"Navigation.html": "ajaxNav",
-			"Header.html": "ajaxHead",
-			"Section.html": "ajaxSec",
 			"Footer.html": "ajaxFoot",
-		  };
-		  const yeeet = [["Navigation", "ajaxNav"]];
-  
+		  };  
 		  await Promise.all(
 			Object.entries(data).map(async ([page, target]) =>
 			  fetch(page).then(

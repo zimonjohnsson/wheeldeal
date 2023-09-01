@@ -112,7 +112,6 @@ function addToCart(name) {
 	showCart();
 }
 
-
 function removeFromCart(name) {
 	if (name != null) {
 		if (localStorage.getItem("savedItems") != null) addedItems = JSON.parse(localStorage.getItem("savedItems"));
@@ -155,26 +154,3 @@ function CountCartItems() {
 
 	document.getElementById("countCart").innerHTML = "Total - "+ totalItems +" items : $"+ totalCost;
 }
-
-/*const rakna = localStorage.getItem("savedCount");
-const storedArray = JSON.parse(rakna);
-console.log(storedArray); // Logging the parsed array to check
-
-if (Array.isArray(storedArray)) {
-  // Step 2: Loop through the array and add up all the numbers
-  let sum = 0;
-
-  for (const num of storedArray) {
-    if (typeof num === 'number') {
-      sum += num;
-    }
-  }
-
-  // Step 3: Display or use the result
-  console.log(sum);
-  
-  // Update the HTML content with the calculated sum
-  document.getElementById("countingThing").innerHTML = sum;
-} else {
-  console.log("No valid array found in localStorage.");
-}*/
