@@ -127,7 +127,7 @@ function removeFromCart(name) {
 		localStorage.setItem("savedItems", JSON.stringify(addedItems));
 		localStorage.setItem("savedCount", JSON.stringify(addedCounts));
 	}
-
+	window.location.reload();
 	showCart();
 }
 
@@ -136,6 +136,7 @@ function ClearAll() {
 	addedCounts = [];
 	localStorage.setItem("savedItems", JSON.stringify(addedItems));
 	localStorage.setItem("savedCount", JSON.stringify(addedCounts));
+	window.location.reload();
 	showCart();
 }
 
