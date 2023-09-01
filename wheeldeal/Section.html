@@ -3,7 +3,7 @@
 		<div class="col mb-5">
 			<div class="card h-100">
 				<!-- Product image-->
-				<img class="card-img-top" src="assets/Car1.jpg" alt="..." />
+				<img class="card-img-top" src="assets/Car1.jpg" alt="..." data-toggle="modal" data-target="#productModal"/>
 				<!-- Product details-->
 				<div class="card-body p-4">
 					<div class="text-center">
@@ -15,16 +15,40 @@
 				</div>
 				<!-- Product actions-->
 				<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-					<div class="text-center cartButton"><button onclick="addToCart('Retro Rattletron 3000')"> Add to cart </button></div>
+					<div class="text-center cartButton"><button onclick="addToCart('Retro Rattletron 3000')">Add to cart</button></div>
 				</div>
 			</div>
 		</div>
+
+		<div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg" role="document">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <h5 class="modal-title" id="productModalLabel">Retro Rattleon 3000</h5>
+				  <button type="button" class="close" data-dismiss="modal" aria-label="Stäng">
+					<span aria-hidden="true">&times;</span>
+				  </button>
+				</div>
+				<div class="modal-body">
+				  <!-- Här kan du placera produktinformationen, bilder, beskrivning, etc. -->
+				  <img src="Assets/Car1.jpg" alt="Produktbild">
+				  <p>Retro Rattleon 3000 är en bil som förenar 1950-talets retrodesign med modern teknologi och prestanda, och den erbjuder en nostalgisk upplevelse i en tidlös och elegant förpackning..</p>
+				  <p>$50,000.00</p>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-secondary" data-dismiss="modal">Stäng</button>
+				  <button onclick="addToCart('Retro Rattletron 3000')">Add to cart</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+
 		<div class="col mb-5">
 			<div class="card h-100">
 				<!-- Sale badge-->
-
+				<div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
 				<!-- Product image-->
-				<img class="card-img-top" src="./Assets/Car3.jpg" alt="..." />
+				<img class="card-img-top" src="./Assets/Car3.jpg" alt="..." data-toggle="modal" data-target="#productModal1"/>
 				<!-- Product details-->
 				<div class="card-body p-4">
 					<div class="text-center">
@@ -36,16 +60,40 @@
 				</div>
 				<!-- Product actions-->
 				<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-					<div class="text-center cartButton"><button onclick="addToCart('PixelPulse Prowler')"> Add to cart </button></div>
+					<div class="text-center cartButton"><button onclick="addToCart('PixelPulse Prowler')">Add to cart</button></div>
 				</div>
 			</div>
 		</div>
+
+		<div class="modal fade" id="productModal1" tabindex="-1" role="dialog" aria-labelledby="productModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg" role="document">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <h5 class="modal-title" id="productModalLabel">PixelPulse Prowler</h5>
+				  <button type="button" class="close" data-dismiss="modal" aria-label="Stäng">
+					<span aria-hidden="true">&times;</span>
+				  </button>
+				</div>
+				<div class="modal-body">
+				  <!-- Här kan du placera produktinformationen, bilder, beskrivning, etc. -->
+				  <img src="./Assets/Car3.jpg" alt="Produktbild">
+				  <p>PixelPulse Prowler är en futuristisk elbil med självkörande funktioner, imponerande räckvidd och modern design.</p>
+				  <p>$30,000.00</p>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-secondary" data-dismiss="modal">Stäng</button>
+				  <button onclick="addToCart('PixelPulse Prowler')">Add to cart</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+
 		<div class="col mb-5">
 			<div class="card h-100">
 				<!-- Sale badge-->
-
+				<div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
 				<!-- Product image-->
-				<img class="card-img-top" src="./Assets/Car2.jpg" alt="..." />
+				<img class="card-img-top" src="./Assets/Car2.jpg" alt="..." data-toggle="modal" data-target="#productModal2"/>
 				<!-- Product details-->
 				<div class="card-body p-4">
 					<div class="text-center">
@@ -57,10 +105,33 @@
 				</div>
 				<!-- Product actions-->
 				<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-					<div class="text-center cartButton"><button onclick="addToCart('Viridian Vigilante')"> Add to cart </button></div>
+					<div class="text-center cartButton"><button onclick="addToCart('Viridian Vigilante')">Add to cart</button></div>
 				</div>
 			</div>
 		</div>
+
+		<div class="modal fade" id="productModal2" tabindex="-1" role="dialog" aria-labelledby="productModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg" role="document">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <h5 class="modal-title" id="productModalLabel">Viridian Vigilante</h5>
+				  <button type="button" class="close" data-dismiss="modal" aria-label="Stäng">
+					<span aria-hidden="true">&times;</span>
+				  </button>
+				</div>
+				<div class="modal-body">
+				  <!-- Här kan du placera produktinformationen, bilder, beskrivning, etc. -->
+				  <img src="./Assets/Car2.jpg" alt="Produktbild">
+				  <p>Viridian Vigilante är en elbil med en robust och futuristisk design som signalerar kraft och prestanda.</p>
+				  <p>$60,000.00</p>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-secondary" data-dismiss="modal">Stäng</button>
+				  <button onclick="addToCart('Viridian Vigilante')">Add to cart</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
 		<div class="col mb-5">
 			<div class="card h-100">
 				<!-- Product image-->

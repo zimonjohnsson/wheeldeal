@@ -9,6 +9,9 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
 	<link href="css/styles.css" rel="stylesheet" />
 	<link rel="stylesheet" href="app.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	<style>
 		#navBilar{
 			color: red;
@@ -38,7 +41,7 @@
 			<div class="col mb-5">
 				<div class="card h-100">
 					<!-- Product image-->
-					<img class="card-img-top" src="assets/Car1.jpg" alt="..." />
+					<img class="card-img-top" src="assets/Car1.jpg" alt="..." data-toggle="modal" data-target="#productModalb"/>
 					<!-- Product details-->
 					<div class="card-body p-4">
 						<div class="text-center">
@@ -54,12 +57,36 @@
 					</div>
 				</div>
 			</div>
+
+            <div class="modal fade" id="productModalb" tabindex="-1" role="dialog" aria-labelledby="productModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel">Retro Rattleon 3000</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Stäng">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <!-- Här kan du placera produktinformationen, bilder, beskrivning, etc. -->
+                      <img src="Assets/Car1.jpg" alt="Produktbild">
+                      <p>Retro Rattleon 3000 är en bil som förenar 1950-talets retrodesign med modern teknologi och prestanda, och den erbjuder en nostalgisk upplevelse i en tidlös och elegant förpackning..</p>
+                      <p>$50,000.00</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Stäng</button>
+                      <button onclick="addToCart('Retro Rattletron 3000')">Add to cart</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
 			<div class="col mb-5">
 				<div class="card h-100">
 					<!-- Sale badge-->
 					<div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
 					<!-- Product image-->
-					<img class="card-img-top" src="./Assets/Car3.jpg" alt="..." />
+					<img class="card-img-top" src="./Assets/Car3.jpg" alt="..." data-toggle="modal" data-target="#productModalb1"/>
 					<!-- Product details-->
 					<div class="card-body p-4">
 						<div class="text-center">
@@ -71,16 +98,40 @@
 					</div>
 					<!-- Product actions-->
 					<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-						<div class="text-center cartButton"><button onclick="addToCart('PixelPulse Prowler')">Add to cart</a></div>
+						<div class="text-center cartButton"><button onclick="addToCart('PixelPulse Prowler')">Add to cart</button></div>
 					</div>
 				</div>
 			</div>
+
+            <div class="modal fade" id="productModalb1" tabindex="-1" role="dialog" aria-labelledby="productModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel">PixelPulse Prowler</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Stäng">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <!-- Här kan du placera produktinformationen, bilder, beskrivning, etc. -->
+                      <img src="./Assets/Car3.jpg" alt="Produktbild">
+                      <p>PixelPulse Prowler är en futuristisk elbil med självkörande funktioner, imponerande räckvidd och modern design.</p>
+                      <p>$30,000.00</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Stäng</button>
+                      <button onclick="addToCart('PixelPulse Prowler')">Add to cart</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
 			<div class="col mb-5">
 				<div class="card h-100">
 					<!-- Sale badge-->
 					<div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
 					<!-- Product image-->
-					<img class="card-img-top" src="./Assets/Car2.jpg" alt="..." />
+					<img class="card-img-top" src="./Assets/Car2.jpg" alt="..." data-toggle="modal" data-target="#productModalb2"/>
 					<!-- Product details-->
 					<div class="card-body p-4">
 						<div class="text-center">
@@ -92,14 +143,38 @@
 					</div>
 					<!-- Product actions-->
 					<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-						<div class="text-center cartButton"><button onclick="addToCart('Viridian Vigilante')">Add to cart</a></div>
+						<div class="text-center cartButton"><button onclick="addToCart('Viridian Vigilante')">Add to cart</button></div>
 					</div>
 				</div>
 			</div>
+
+            <div class="modal fade" id="productModalb2" tabindex="-1" role="dialog" aria-labelledby="productModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel">Viridian Vigilante</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Stäng">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <!-- Här kan du placera produktinformationen, bilder, beskrivning, etc. -->
+                      <img src="./Assets/Car2.jpg" alt="Produktbild">
+                      <p>Viridian Vigilante är en elbil med en robust och futuristisk design som signalerar kraft och prestanda.</p>
+                      <p>$60,000.00</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Stäng</button>
+                      <button onclick="addToCart('Viridian Vigilante')">Add to cart</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
 			<div class="col mb-5">
 				<div class="card h-100">
 					<!-- Product image-->
-					<img class="card-img-top" src="./Assets/GTR 4090TI.png" alt="..." />
+					<img class="card-img-top" src="./Assets/GTR 4090TI.png" alt="..." data-toggle="modal" data-target="#productModalb3"/>
 					<!-- Product details-->
 					<div class="card-body p-4">
 						<div class="text-center">
@@ -119,16 +194,40 @@
 					</div>
 					<!-- Product actions-->
 					<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-						<div class="text-center cartButton"><button onclick="addToCart('GTR 4090TI')">Add to cart</a></div>
+						<div class="text-center cartButton"><button onclick="addToCart('GTR 4090TI')">Add to cart</button></div>
 					</div>
 				</div>
 			</div>
+
+            <div class="modal fade" id="productModalb3" tabindex="-1" role="dialog" aria-labelledby="productModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel">GTR 4090TI</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Stäng">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <!-- Här kan du placera produktinformationen, bilder, beskrivning, etc. -->
+                      <img src="./Assets/GTR 4090TI.png" alt="Produktbild">
+                      <p>GTR 4090TI är en renodlad drömbil med otrolig prestanda och en futuristisk design.</p>
+                      <p>$100,000.00</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Stäng</button>
+                      <button onclick="addToCart('GTR 4090TI')">Add to cart</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
 			<div class="col mb-5">
 				<div class="card h-100">
 					<!-- Sale badge-->
 					<div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
 					<!-- Product image-->
-					<img class="card-img-top" src="./Assets/Tizi Blows Backfire.png" alt="..." />
+					<img class="card-img-top" src="./Assets/Tizi Blows Backfire.png" alt="..." data-toggle="modal" data-target="#productModalb4"/>
 					<!-- Product details-->
 					<div class="card-body p-4">
 						<div class="text-center">
@@ -140,14 +239,39 @@
 					</div>
 					<!-- Product actions-->
 					<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-						<div class="text-center cartButton"><button onclick="addToCart('Tizi Blows Backfire')">Add to cart</a></div>
+						<div class="text-center cartButton"><button onclick="addToCart('Tizi Blows Backfire')">Add to cart</button></div>
 					</div>
 				</div>
 			</div>
+
+            <div class="modal fade" id="productModalb4" tabindex="-1" role="dialog" aria-labelledby="productModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel">Tizi Blows Backfire</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Stäng">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <!-- Här kan du placera produktinformationen, bilder, beskrivning, etc. -->
+                      <img src="./Assets/Tizi Blows Backfire.png" alt="Produktbild">
+                      <p>
+                        Tizi Blows Backfire är en kompakt sportbil med imponerande acceleration och design som sticker ut.</p>
+                      <p>$110,000.00</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Stäng</button>
+                      <button onclick="addToCart('Tizi Blows Backfire')">Add to cart</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
 			<div class="col mb-5">
 				<div class="card h-100">
 					<!-- Product image-->
-					<img class="card-img-top" src="./Assets/Ragnarok Twin Turbo.png" alt="..." />
+					<img class="card-img-top" src="./Assets/Ragnarok Twin Turbo.png" alt="..." data-toggle="modal" data-target="#productModalb5" />
 					<!-- Product details-->
 					<div class="card-body p-4">
 						<div class="text-center">
@@ -165,6 +289,30 @@
 			</div>
 		</div>
 	</div>
+
+    <div class="modal fade" id="productModalb5" tabindex="-1" role="dialog" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="productModalLabel">Ragnarok Twin Turbo</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Stäng">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <!-- Här kan du placera produktinformationen, bilder, beskrivning, etc. -->
+              <img src="./Assets/Ragnarok Twin Turbo.png" alt="Produktbild">
+              <p>
+                Ragnarok Twin Turbo är en kraftfull och högpresterande sportbil med dubbelt turboladdade motorer och imponerande hastighet.</p>
+              <p>$120,000.00</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Stäng</button>
+              <button onclick="addToCart('Ragnarok Twin Turbo')">Add to cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
 	<div style="clear:both;">
 		<footer id="ajaxFoot" class="py-3 bg-dark" ></footer>
