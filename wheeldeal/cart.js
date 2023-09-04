@@ -47,7 +47,7 @@ function showCart() {
 			parseHTML += '<tr class="cartItem"> <td>' + addedItems[i]
 			+'</td><td>'+ addedCounts[i] +'</td>'
 			+'<td> $'+ (theItem.Price * addedCounts[i]) +'</td>'
-			+'<td><input type="button" value="Remove" onclick="removeFromCart(\''+ addedItems[i] +'\')"> </td></tr>';
+			+'<td><input type="button" value="Ta Bort" onclick="removeFromCart(\''+ addedItems[i] +'\')"> </td></tr>';
 		}
 		document.getElementById("cartList").innerHTML = parseHTML;
 		CountCartItems();

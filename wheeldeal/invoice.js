@@ -31,7 +31,7 @@ if (localStorage.getItem("savedItems") != null) addedItems = JSON.parse(localSto
 if (localStorage.getItem("savedCount") != null) addedCounts = JSON.parse(localStorage.getItem("savedCount"));
 
 function loadCart() {
-    var parseHTML = "<tr> <th>Name</th> <th>Quantity</th> <th>Total</th> </tr>";
+    var parseHTML = "<tr> <th>Namn</th> <th>Antal</th> <th>Totalt</th> </tr>";
 
     for (let i = 0; i < addedItems.length; i++) {
         let theItem = Items.find((obj) => obj.Name == addedItems[i]);
@@ -44,6 +44,6 @@ function loadCart() {
     for (let i = 0; i < addedItems.length; i++) {
 		totalCost += (Items.find((obj) => obj.Name == addedItems[i]).Price * addedCounts[i]);
 	}
-    document.getElementById("totalPrice").innerHTML = '<strong>Total Amount: $</strong>'+ totalCost;
+    document.getElementById("totalPrice").innerHTML = '<strong>Totalt: $</strong>'+ totalCost;
     document.getElementById("invList").innerHTML = parseHTML;
 }
