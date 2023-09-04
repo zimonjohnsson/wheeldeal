@@ -132,6 +132,22 @@ tr:nth-child(even) {
   }
 }
 
+@media only screen and (max-width: 800px){
+    #cartTable{
+        font-size: 0.7rem;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    #cartTable{
+        font-size: 0.5rem;
+    }
+}
+
+.modal-body img{
+    width: 80%;
+}
+
 .card {
   --bs-card-spacer-y: 1rem;
   --bs-card-spacer-x: 1rem;
