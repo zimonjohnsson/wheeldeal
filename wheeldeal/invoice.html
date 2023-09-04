@@ -74,7 +74,7 @@
     </style>
 </head>
 <body onload="loadCart()">
-    <div class="invoice" style="max-width: 1000px;">
+    <div class="invoice" style="max-width: 1000px;" id="dinMamma">
         <div class="header">
             <img src="./Assets/Logo.png" alt="">
             <h1>Invoice Receipt</h1>
@@ -100,7 +100,7 @@
     </div>
 
     <div style="text-align: center; margin-top: 50px;">
-        <button onclick="printPDF()">Print PDF</button>
+        <button onclick="printPDF('dinMamma')">Print PDF</button>
     </div>
     <div class="email-section">
         <h2>Skicka fakturan via e-post</h2>
@@ -115,8 +115,12 @@
 
     <script src="invoice.js"></script>
     <script>
-        function printPDF() {
-            window.print();
+        function printPDF(areaID) {
+            var printContent = document.getElementById(areaID).innerHTML;
+            var originalContent = document.body.innerHTML;
+        document.body.innerHTML = printContent;
+        window.print();
+        document.body.innerHTML = originalContent;
         }
     
         async function sendInvoiceByEmail(event) {
