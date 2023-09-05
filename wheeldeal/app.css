@@ -215,7 +215,7 @@ tr:nth-child(even) {
   border: none;
   transition: all 0.4s ease 0s;
   border: black 1px solid;
-  transition: transform 0.1s;
+  transition: 0.2s ease;
 }
 .cartButton button:hover {
   background-color: rgba(226, 37, 255, 0.6);
